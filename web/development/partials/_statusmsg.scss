@@ -1,0 +1,55 @@
+.statusmsg {
+    width: 120%;
+    height: auto;
+    padding: 13px;
+    bottom: 53px;
+    position: relative;
+    background: #FFF;
+    background: rgba(255,255,255,0.85);
+    display: none;
+
+    &#error {
+        .icon {
+            width: 47px;
+            height: 47px;
+            display: block;
+            float: left;
+            margin-right: 13px;
+            margin-top: 7px;
+            background: url(../img/error.jpg) center center no-repeat;
+        }
+    }
+
+    &#good {
+        .icon {
+            width: 47px;
+            height: 47px;
+            display: block;
+            float: left;
+            margin-right: 13px;
+            margin-top: 7px;
+            background: url(../img/correct.jpg) center center no-repeat;
+        }
+    }
+
+    .msg {
+        width: 180px;
+        height: auto;
+        float: left;
+
+        .title {
+            font-family: 'DIN bold', Helvetica, Arial, Tahoma;
+            text-transform: uppercase;
+            font-size: 1.4em;
+            color: #da2128;
+        }
+
+        .text {
+            font-family: 'Arial', Tahoma;
+            font-size: 0.75em;
+            color: #4c4c4c;
+        }
+
+    }
+
+}

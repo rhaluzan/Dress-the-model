@@ -1,0 +1,177 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div id="main-container">
+
+        <div class="row">
+            <div class="large-11 columns large-centered">
+                <!--<div id="h1">Izberi okolje in obleci modela</div>-->
+                <div id="h1" style="margin-bottom: 0; font-size: 43px !important;">Ko šport postane pravi užitek!</div>
+                <p style="color: #FFF; margin-top: -7px; font-family: sans-serif; font-size: 0.8em; text-transform: uppercase; padding: 0.45em; text-align: center; background: rgba(0,0,0,0.25);">Primerno obleci modela! Bodi najboljši in si pribori <strong>eno od tedenskih praktičnih nagrad</strong>. Izmed vseh sodelujočih bomo izžrebali <strong>3 dobitnike vrhunskega  H2Flow jopiča</strong>!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="large-11 columns large-centered">
+
+                <div class="row" style="margin-bottom: 1.6125em">
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-pohodnistvo" data-url="environment/env-pohodnistvo">
+                            <div class="img-box env-pohodnistvo">
+                                <div class="deg ten"></div>
+                                <div class="name">Lahko pohodništvo</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-smucanje" data-url="environment/env-smucanje">
+                            <div class="img-box env-smucanje">
+                                <div class="deg five"></div>
+                                <div class="name">Smučanje</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-tek_na_smuceh" data-url="environment/env-tek_na_smuceh">
+                            <div class="img-box env-tek_na_smuceh">
+                                <div class="deg five"></div>
+                                <div class="name">Tek na smučeh</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 1.6125em">
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-jadranje" data-url="environment/env-jadranje">
+                            <div class="img-box env-jadranje">
+                                <div class="deg twenty"></div>
+                                <div class="name">Jadranje</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-klasicni_tek" data-url="environment/env-klasicni_tek">
+                            <div class="img-box env-klasicni_tek">
+                                <div class="deg twenty"></div>
+                                <div class="name">Klasičen tek</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-kolesarjenje" data-url="environment/env-kolesarjenje">
+                            <div class="img-box env-kolesarjenje">
+                                <div class="deg twenty"></div>
+                                <div class="name">Kolesarjenje</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row" style="margin-bottom: 1.6125em">
+                    <div class="large-4 columns">
+                        <a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/environment/env-sprehod" data-url="environment/env-sprehod">
+                            <div class="img-box env-sprehod">
+                                <div class="deg fifteen"></div>
+                                <div class="name">Sprehod</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="large-4 columns left">
+                        <img src="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/nagrade.png" style="display: block; margin: auto;position: absolute; top: -13px;">
+                    </div>
+
+                    <div class="large-4 columns">
+
+                        <div id="score-container" style="position: relative; top: 0; left: 4px;">
+                            <!-- SCORE -->
+                            <div id="score" style="padding: 5px 7px; width: 84px;">
+                                <div class="table">
+                                    <div class="row">
+                                        <div class="cell name border">
+                                            <span class="small">Število</span> <span class="big">točk</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell"><div id="value">{{ points|default('0') }}</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- POSITIONS -->
+                            <div id="position" style="float: left; padding: 5px 7px; width: 127px;">
+                                <div class="table">
+                                    <div class="row">
+                                        <div class="cell name border">
+                                            <span class="small">Trenutno mesto</span> <span class="big">na lestvici</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="cell">
+                                            <center><span class="curpos">{{ curpos|default('0') }}</span><span class="allpos">/{{ allpos|default('0') }}</span></center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="{{ path('leaderboardAction') }}/1" data-url="leaderboard/1" style="width: 211px; margin: 25px auto 0px; display: block; position: relative; left: -4px; text-align: center;" class="button right">Lestvica vodilnih</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div id="footer">
+        <div class="row">
+            <div class="large-5 columns">
+                <p>Ne veš kaj izbrati?<br/>
+                Pomagaj si na <a href="http://www.sportspirit.si/" target="_blank" class="red" style="text-decoration: none;">sportspirit.si</a></p>
+            </div>
+            <div class="large-2 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/hhlogo.png" style="display: block; margin: 0.45em auto 0;">
+            </div>
+            <div class="large-5 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/sportspiritlogo.png" style="display: block; margin: 1.46em 0 0; float: right;">
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%; display: block; margin: 1em 0 0em;"><a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/splosni-pogoji-nagradne-igre.pdf" target="_blank" style="display: block; text-align: center; font-size: 0.7em; color: #888; text-decoration: none;">Splošni pogoji</a></div>
+{% endblock %}
+
+{% block footercontents %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script>document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/fb-fs/tdfriendselector.js"><\/script>')</script>
+    <script>
+    $(document).ready(function() {
+      $.ajaxSetup({ cache: true });
+      $.getScript('//connect.facebook.net/sl_SI/all.js', function(){
+        FB.init({
+            appId: '163113757233003',
+            //channelUrl: '//yourapp.com/channel.html',
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        });
+
+        FB.Canvas.setSize({ width: 810, height: $('body').height() });
+
+        FB.Canvas.setDoneLoading( function(response) {
+            FB.Canvas.setAutoGrow();
+        });
+
+        checkUserAuth();
+
+      });
+    });
+    </script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/plugins.js"></script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/main.js"></script>
+{% endblock %}

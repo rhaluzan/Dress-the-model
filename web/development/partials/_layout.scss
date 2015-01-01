@@ -1,0 +1,552 @@
+body {
+
+    overflow: hidden;
+    width: 100%;
+    max-width: 810px;
+
+    &.not-liked {
+
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            background: url('../img/not-liked.jpg') top left no-repeat !important;
+        }
+    }
+
+    &.home {
+
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            background: url('../img/zacetni.jpg') top left no-repeat !important;
+        }
+
+    }
+
+    // Environments
+    &.env-sprehod {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-sprehod.jpg') top left no-repeat !important;
+        }
+    }
+    &.env-klasicni_tek {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-klasicni_tek.jpg') top left no-repeat !important;
+        }
+    }
+    &.env-kolesarjenje {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-kolesarjenje.jpg') top left no-repeat !important;
+        }
+    }
+    &.env-pohodnistvo {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-pohodnistvo.jpg') top left no-repeat !important;
+        }
+    }
+    &.env-tek_na_smuceh {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-tek_na_smuceh.jpg') top left no-repeat !important;
+        }
+    }
+    &.env-smucanje {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-smucanje.jpg') top left no-repeat !important;
+        }
+    }
+    &.env-jadranje {
+        #main-container {
+            width: 100%;
+            height: 679px;
+            display: table;
+            position: relative;
+            background: url('../img/env-jadranje.jpg') top left no-repeat !important;
+        }
+    }
+
+}
+
+.img-box {
+    position: relative;
+    width: 211px;
+    height: 150px;
+    display: block;
+    margin: auto;
+    border: 3px solid #FFF;
+
+    &.locked {
+
+    }
+
+    .locked {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        z-index: 99999;
+        cursor: crosshair;
+        background: url('../img/ponovno_jutri.png') center center !important;
+    }
+
+    // Environments
+    &.env-tek_na_smuceh {
+        background-image: url('../img/env-tek_na_smuceh.jpg');
+        background-position: bottom center;
+        @include background-size(cover);
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-tek_na_smuceh.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-tek_na_smuceh.jpg', sizingMethod='scale')";
+    }
+    &.env-klasicni_tek {
+        background: url('../img/env-klasicni_tek.jpg');
+        @include background-size(cover);
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-klasicni_tek.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-klasicni_tek.jpg', sizingMethod='scale')";
+    }
+    &.env-kolesarjenje {
+        background-image: url('../img/env-kolesarjenje.jpg');
+        @include background-size(cover);
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-kolesarjenje.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-kolesarjenje.jpg', sizingMethod='scale')";
+    }
+    &.env-pohodnistvo {
+        background-image: url('../img/env-pohodnistvo.jpg');
+        @include background-size(cover);
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-pohodnistvo.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-pohodnistvo.jpg', sizingMethod='scale')";
+    }
+    &.env-sprehod {
+        background-image: url('../img/env-sprehod.jpg');
+        background-position: bottom center;
+        @include background-size(cover);
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-sprehod.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-sprehod.jpg', sizingMethod='scale')";
+    }
+    &.env-smucanje {
+        background-image: url('../img/env-smucanje.jpg');
+        background-position: bottom center;
+        @include background-size(cover);
+         filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-smucanje.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-smucanje.jpg', sizingMethod='scale')";
+    }
+    &.env-jadranje {
+        background-image: url('../img/env-jadranje.jpg');
+        background-position: bottom right;
+        @include background-size(cover);
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-jadranje.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/env-jadranje.jpg', sizingMethod='scale')";
+    }
+
+    .deg {
+        width: 26px;
+        height: 77px;
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        &.five {
+            background: url('../img/5deg.png') center center no-repeat;
+        }
+
+        &.ten {
+            background: url('../img/10deg.png') center center no-repeat;
+        }
+
+        &.fifteen {
+            background: url('../img/15deg.png') center center no-repeat;
+        }
+
+        &.twenty {
+            background: url('../img/20deg.png') center center no-repeat;
+        }
+
+    }
+
+    .name {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-transform: uppercase;
+        color: #FFF;
+        background: #000;
+        background: rgba(0,0,0,0.5);
+        text-align: center;
+        font-family: Arial;
+        font-size: 13px;
+        padding: 0.3em 0;
+    }
+
+}
+
+.home {
+    #h1 {
+        right: 0 !important;
+    }
+}
+
+#h1 {
+    position: relative;
+    right: -24px;
+    width: 100%;
+    display: inline-block;
+    font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+    font-size: 44px;
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0.5em auto 0;// 0.75em auto 1em;
+
+    &.game {
+        margin: 0.75em auto 1em 20px !important;
+        line-height: 1.2em !important;
+    }
+
+}
+
+#footer {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #949494;
+    background: #d1d1d1;
+
+    p {
+        color: #000;
+        font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0.4em 0;
+    }
+
+    .red {
+        color: #da2128;
+    }
+
+}
+
+.blue {
+    color: #2b398d;
+}
+
+.wardrobe {
+    width: 210px;
+    height: 100%;
+    display: table;
+    position: absolute;
+    right: -7px;
+    background: #FFF;
+    background: rgba(255,255,255,0.85);
+
+    .title {
+        color: #000;
+        font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+        font-size: 1.4em;
+        margin: 0;
+        padding: 1.8em 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+}
+
+.deg-big {
+    width: 100px;
+    height: 154px;
+    display: block;
+    position: relative;
+    left: -5px;
+    bottom: 20px;
+
+    &.five {
+        background-image: url('../img/termometer_big.png');
+        background-position: 0 -26px;
+        background-repeat: no-repeat;
+    }
+    &.ten {
+        background-image: url('../img/termometer_big.png');
+        background-position: -100px -26px;
+        background-repeat: no-repeat;
+    }
+    &.fifteen {
+        background-image: url('../img/termometer_big.png');
+        background-position: -300px -26px;
+        background-repeat: no-repeat;
+    }
+    &.twenty {
+        background-image: url('../img/termometer_big.png');
+        background-position: -200px -26px;
+        background-repeat: no-repeat;
+    }
+
+}
+
+.items {
+    margin: 0;
+    list-style: none;
+    padding: 0 1.5em;
+
+    li {
+        margin-bottom: 23px;
+        clear: both;
+        cursor: pointer;
+    }
+
+}
+
+#score-container {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    width: 248px;
+    z-index: 99;
+
+    #score {
+        width: 86px;
+        height: 86px;
+        padding: 5px 16px;
+        background: #000000;
+        float: left;
+        text-align: center;
+        color: #FFF;
+
+        #value {
+            font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+            font-size: 1.95em;
+            font-weight: bold;
+            position: relative;
+            top: -5px;
+        }
+
+        .border {
+            border-bottom: 1px solid #FFF;
+        }
+
+    }
+
+    #layers {
+        width: 140px;
+        height: 86px;
+        padding: 5px 16px;
+        background: #FFF;
+        background: rgba(255,255,255,0.85);
+        float: right;
+        text-align: center;
+
+        .name {
+            color: #000;
+
+            .big {
+                font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+                font-size: 0.87em;
+            }
+
+        }
+
+        .value {
+            width: 108px;
+            height: 42px;
+            background-image: url('../img/layers.png');
+            margin-top: 10px;
+
+            &.one {
+                background-position: 0 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -120px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -240px 0;
+                background-repeat: no-repeat;
+            }
+        }
+
+    }
+
+    #position {
+        width: 140px;
+        height: 86px;
+        padding: 5px 16px;
+        background: #FFF;
+        background: rgba(255, 255, 255, 0.85);
+        float: right;
+        text-align: center;
+
+        .name {
+            color: #000;
+
+            .big {
+                font-size: 1.2em;
+            }
+
+        }
+
+        .curpos {
+            font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+            font-size: 1.95em;
+            font-weight: bold;
+            color: #da2128;
+            position: relative;
+            top: -5px;
+        }
+        .allpos {
+            font-family: 'DIN light', Helvetica, Arial, Tahoma;
+            font-size: 0.85em;
+            color: #000;
+            position: relative;
+            top: -5px;
+        }
+
+        .border {
+            border-bottom: 1px solid #000;
+        }
+
+    }
+
+    .name {
+        font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+        text-transform: uppercase;
+
+        .small {
+            clear: both;
+            width: 100%;
+            display: block;
+            font-size: 0.75em;
+        }
+        .big {
+            font-family: 'DIN light', Helvetica, Arial, Tahoma;
+            clear: both;
+            width: 100%;
+            display: block;
+            font-size: 1.1em;
+        }
+
+    }
+
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+
+    .row {
+        display: table-row;
+        height: 50%;
+        width: 100%;
+        color: #FFF;
+
+        .cell {
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            color: #FFF;
+        }
+
+    }
+
+}
+
+.nrow {
+    width: 735px;
+    margin: auto;
+}
+.white-box {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background: #FFF;
+    background: rgba(255,255,255,0.85);
+
+    .heading {
+        width: 100%;
+        height: auto;
+        font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+        font-size: 2em;
+        color: #4c4c4c;
+        text-align: center;
+
+        .red {
+            color: #da2128;
+            text-transform: uppercase;
+        }
+
+    }
+
+    .additional {
+        width: 100%;
+        height: auto;
+        font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+        font-size: 0.95em;
+        color: #4c4c4c;
+        text-align: center;
+        margin-top: 15px;
+
+        .bold {
+            font-family: 'DIN bold', Helvetica, Arial, Tahoma;
+        }
+
+    }
+
+}
+
+.button {
+    background: #da2128;
+    color: #FFF;
+    padding: 10px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    display: table;
+    font-family: 'DIN regular', Helvetica, Arial, Tahoma;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+#successContainer {
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    z-index: 99;
+    display: none;
+}
+
+a {
+    cursor: pointer;
+}

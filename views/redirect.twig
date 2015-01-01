@@ -1,0 +1,82 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div id="main-container" style="margin: auto; display: block;">
+
+        <div id="successContainer" style="display: block;">
+            <div class="nrow">
+                <div class="white-box">
+                    <div class="heading"><span class="red">Preusmerjamo vas...</span> Počakajte trenutek.</div>
+                    <!--<div class="additional">Povečaj si možnosti za tedensko nagrado zato <span class="bold">povabi prijatelje</span> ali <span class="bold">igraj ponovno jutri!</span></div>-->
+                </div>
+            </div>
+
+            <div class="nrow">
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="large-8 columns">
+                <div style="width: 100%; height: 679px; position: relative;">
+
+                    <div id="score-container">
+                    </div>
+
+                    <div class="dress three" style="right: -75px;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div id="footer">
+        <div class="row">
+            <div class="large-5 columns">
+                <p>Ne veš kaj izbrati?<br/>
+                Pomagaj si na <span class="red">sportspirit.si</span></p>
+            </div>
+            <div class="large-2 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/hhlogo.png" style="display: block; margin: 0.45em auto 0;">
+            </div>
+            <div class="large-5 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/sportspiritlogo.png" style="display: block; margin: 1.46em 0 0; float: right;">
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footercontents %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script>document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/fb-fs/tdfriendselector.js"><\/script>')</script>
+    <script>
+    $(document).ready(function() {
+        window.top.location.href = "https://www.facebook.com/pages/SPORT-SPIRIT/1427382827478573?id=1427382827478573&sk=app_163113757233003";
+        $.ajaxSetup({ cache: true });
+        $.getScript('//connect.facebook.net/sl_SI/all.js', function(){
+            FB.init({
+                appId: '163113757233003',
+                //channelUrl: '//yourapp.com/channel.html',
+                status     : true, // check login status
+                cookie     : true, // enable cookies to allow the server to access the session
+                xfbml      : true  // parse XFBML
+        });
+
+            FB.Canvas.setSize({ width: 810, height: $('body').height() });
+
+            FB.Canvas.setDoneLoading( function(response) {
+                FB.Canvas.setAutoGrow();
+            });
+
+            checkUserAuth();
+
+        });
+    });
+    </script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/plugins.js"></script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/main.js"></script>
+{% endblock %}

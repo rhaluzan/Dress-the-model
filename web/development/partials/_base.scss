@@ -1,0 +1,38 @@
+// Foundation
+@import "../vendor/foundation/foundation/variables.scss";
+
+// Global styles
+
+// $body-bg: #fff;
+//$body-font-color: #FFF;
+//$body-font-family: "Ubuntu", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
+html, body {
+	background: #FFF !important;
+}
+
+// Mixins
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// Dependancies
+@import "compass/css3";
+@import "compass/css3/pie";
+@import "variables.scss";
+@import "../vendor/foundation/foundation.scss";
+// @import "../vendor/foundation/foundation/components/tooltips.scss";
+
+// Imports
+@import "init.scss";
+@import "layout.scss";
+@import "dresses.scss";
+@import "statusmsg.scss";
+@import "tables.scss";
+@import "pagination.scss";
+@import "qtip.scss";

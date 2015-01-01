@@ -1,0 +1,183 @@
+body {
+
+    overflow: hidden;
+    width: 100%;
+
+    // Environments
+    &.env-sprehod {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-sprehod.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+    &.env-klasicni_tek {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-tek.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+    &.env-kolesarjenje {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-kolesarjenje.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+    &.env-pohodnistvo {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-pohodnistvo.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+    &.env-tek_na_smuceh {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-tek-na-smuceh.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+    &.env-smucanje {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-smucanje.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+    &.env-jadranje {
+
+        .dress {
+            width: 350px;
+            height: 487px;
+            position: absolute;
+            bottom: 0;
+            background: url('../img/dressup-jadranje.png');
+
+            &.one {
+                background-position: -15px 0;
+                background-repeat: no-repeat;
+            }
+            &.two {
+                background-position: -383px 0;
+                background-repeat: no-repeat;
+            }
+            &.three {
+                background-position: -751px 0;
+                background-repeat: no-repeat;
+            }
+
+        }
+
+    }
+
+}

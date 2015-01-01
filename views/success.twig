@@ -1,0 +1,148 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div id="main-container">
+
+        <div id="successContainer" style="display: block;">
+            <div class="nrow">
+                <div class="white-box">
+                    <div class="heading"><span class="red">Čestitamo!</span> Sedaj si pripravljen {{ taglineSuccess | default('na zimo.') }}</div>
+                    <div class="additional">Bodi pripravljen še na druge razmere, zabavaj se in si povečaj možnosti za nagrado.<br /><span class="bold">Igraj ponovno</span> ali <span class="bold">povabi novega prijatelja!</span></div>
+                </div>
+            </div>
+
+            <div class="nrow">
+                <a href="https://www.facebook.com/pages/SPORT-SPIRIT/1427382827478573?id=1427382827478573&sk=app_163113757233003" target="_top" id="again" class="button left" style="margin-right: 15px;">Igraj naprej</a>
+                <div id="invite" class="button left">Povabi prijatelje</div>
+                <a href="{{ path('leaderboardAction') }}/1" data-url="leaderboard/1" class="button right">Lestvica vodilnih</a>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="large-8 columns">
+                <div style="width: 100%; height: 679px; position: relative;">
+
+                    <div id="score-container">
+                        <!-- SCORE -->
+                        <div id="score">
+                            <div class="table">
+                                <div class="row">
+                                    <div class="cell name border">
+                                        <span class="small">Število</span> <span class="big">točk</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><div id="value">{{ points|default('0') }}</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- POSITIONS -->
+                        <div id="position">
+                            <div class="table">
+                                <div class="row">
+                                    <div class="cell name border">
+                                        <span class="small">Trenutno mesto</span> <span class="big">na lestvici</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">
+                                        <center><span class="curpos">{{ curpos|default('null') }}</span><span class="allpos">/{{ allpos|default('n/a') }}</span></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dress three" style="right: -75px;"></div>
+                </div>
+            </div>
+        </div>
+        <!--
+        <h1>Actual gameplay</h1>
+
+        <div id="invite">Invite friends NOW!</div>
+        <h4>Counter: <span id="counter">60</span>s</h4>
+
+        <a href="https://www.facebook.com/pages/SPORT-SPIRIT/1427382827478573?id=1427382827478573&sk=app_163113757233003" target="_top">BACK</a>
+        -->
+
+        <!-- Markup for These Days Friend Selector -->
+        <div id="TDFriendSelector">
+            <div class="TDFriendSelector_dialog">
+                <a href="#" id="TDFriendSelector_buttonClose">x</a>
+                <div class="TDFriendSelector_form">
+                    <div class="TDFriendSelector_header">
+                        <p>Izberite prijatelje</p>
+                    </div>
+                    <div class="TDFriendSelector_content">
+                        <p>Kasneje jih lahko povabite v nagradno igro in si s tem izboljšate rezultat!</p>
+                        <div class="TDFriendSelector_searchContainer TDFriendSelector_clearfix">
+                            <div class="TDFriendSelector_selectedCountContainer"><span class="TDFriendSelector_selectedCount">0</span> / <span class="TDFriendSelector_selectedCountMax">0</span> izbrani prijatelji</div>
+                            <input type="text" placeholder="Search friends" id="TDFriendSelector_searchField" />
+                        </div>
+                        <div class="TDFriendSelector_friendsContainer"></div>
+                    </div>
+                    <div class="TDFriendSelector_footer TDFriendSelector_clearfix">
+                        <a href="#" id="TDFriendSelector_pagePrev" class="TDFriendSelector_disabled">Nazaj</a>
+                        <a href="#" id="TDFriendSelector_pageNext">Napre</a>
+                        <div class="TDFriendSelector_pageNumberContainer">
+                            Stran <span id="TDFriendSelector_pageNumber">1</span> / <span id="TDFriendSelector_pageNumberTotal">1</span>
+                        </div>
+                        <a href="#" id="TDFriendSelector_buttonOK">OK</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div id="footer">
+        <div class="row">
+            <div class="large-5 columns">
+                <p>Ne veš kaj izbrati?<br/>
+                Pomagaj si na <a href="http://www.sportspirit.si/" target="_blank" class="red" style="text-decoration: none;">sportspirit.si</a></p>
+            </div>
+            <div class="large-2 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/hhlogo.png" style="display: block; margin: 0.45em auto 0;">
+            </div>
+            <div class="large-5 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/sportspiritlogo.png" style="display: block; margin: 1.46em 0 0; float: right;">
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%; display: block; margin: 1em 0 0em;"><a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/splosni-pogoji-nagradne-igre.pdf" target="_blank" style="display: block; text-align: center; font-size: 0.7em; color: #888; text-decoration: none;">Splošni pogoji</a></div>
+{% endblock %}
+
+{% block footercontents %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script>document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/fb-fs/tdfriendselector.js"><\/script>')</script>
+    <script>
+    $(document).ready(function() {
+      $.ajaxSetup({ cache: true });
+      $.getScript('//connect.facebook.net/sl_SI/all.js', function(){
+        FB.init({
+            appId: '163113757233003',
+            //channelUrl: '//yourapp.com/channel.html',
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        });
+
+        FB.Canvas.setSize({ width: 810, height: $('body').height() });
+
+        FB.Canvas.setDoneLoading( function(response) {
+            FB.Canvas.setAutoGrow();
+        });
+
+        checkUserAuth();
+
+      });
+    });
+    </script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/plugins.js"></script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/main.js"></script>
+{% endblock %}

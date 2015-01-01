@@ -1,0 +1,158 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    <div id="main-container">
+
+        <div id="successContainer" style="width: 550px; top: 10px;">
+            <div class="nrow" style="float: left; width: 550px; margin-left: 19px; ">
+                <div class="white-box">
+                    <div class="heading"><span class="red">Čestitamo!</span> Sedaj si pripravljen {{ taglineSuccess | default('na zimo.') }}</div>
+                    <div class="additional">Bodi pripravljen še na druge razmere, zabavaj se in si povečaj možnosti za nagrado.<br /><span class="bold">Igraj ponovno</span> ali <span class="bold">povabi novega prijatelja!</span></div>
+
+                </div>
+            </div>
+
+            <div class="nrow" style="clear: both; margin: 0 auto 0 18px; width: 550px;">
+                <a href="https://www.facebook.com/pages/SPORT-SPIRIT/1427382827478573?id=1427382827478573&sk=app_163113757233003" target="_top" id="again" class="button left" style="margin-right: 15px;">Igraj naprej</a>
+                <div id="invite" class="button left">Povabi prijatelje</div>
+                <a href="{{ path('leaderboardAction') }}/1" data-url="leaderboard/1" class="button right">Lestvica vodilnih</a>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="large-8 columns">
+                <div style="width: 100%; height: 679px; position: relative;">
+                    <div id="h1" class"game" style="line-height: 1.1em;">Obleci modela, da mu bo prijetno {{ tagline | default('none') }}</div>
+
+                    <div id="score-container">
+                        <div id="good" class="statusmsg clearfix">
+                            <div class="icon"></div>
+                            <div class="msg" style="margin-top: 15px;">
+                                <div class="title">Pravilno!</div>
+                                <!--<div class="text"><strong>Helly Hansen Revolution</strong><br/>za vrhunsko udobje.</div>-->
+                            </div>
+                        </div>
+                        <div id="error" class="statusmsg clearfix">
+                            <div class="icon"></div>
+                            <div class="msg">
+                                <div class="title">Poskusi ponovno!</div>
+                                <!--<div class="text"><strong>Helly Hansen Revolution</strong><br/>za vrhunsko udobje.</div>-->
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="deg-big {{ deg | default('none') }}"></div>
+                        <div class="clearfix"></div>
+
+                        <!-- SCORE -->
+                        <div id="score">
+                            <div class="table">
+                                <div class="row">
+                                    <div class="cell name border">
+                                        <span class="small">Število</span> <span class="big">točk</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell"><div id="value">{{ points|default('0') }}</div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- POSITIONS -->
+                        <div id="position" class="hidden">
+                            <div class="table">
+                                <div class="row">
+                                    <div class="cell name border">
+                                        <span class="small">Trenutno mesto</span> <span class="big">na lestvici</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="cell">
+                                        <center><span class="curpos">0</span><span class="allpos">/1234</span></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LAYERS -->
+                        <div id="layers">
+                            <div class="name">
+                                <span class="big">Število plasti</span>
+                            </div>
+                            <div class="value one"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="dress one" style="right: -75px;"></div>
+                </div>
+            </div>
+            <div class="large-4 columns">
+                <div style="width: 100%; height: 679px; position: relative; padding: 10px 0;">
+                    <div class="wardrobe">
+                        <div class="title">Garderoba</div>
+                        <ul class="items">
+                            {% for layer in layers %}
+                                <li data-sequence="{{ layer.sequence|default('') }}" class="clearfix" title="{{ layer.longtext }}">
+                                    <!--<div style="width: 250px; height: 78px; background: rgba(0,0,0,0.3); position: absolute; z-index: 99; left: -205px; color: #FFF; font-family: 'Arial', Tahoma; font-size: 12px; padding: 10px;">{{ layer.longtext }}</div>-->
+                                    <div style="width: 50%; float: left;"><img src="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/img/oblacila/{{ layer.pic|default('') }}" width="78"></div>
+                                    <div style="width: 50%; float: left; padding: 1.2em 0.5em; font-family: 'Arial', Tahoma; font-size: 12px; color: #4c4c4c; text-transform: uppercase;">{{ layer.text|default('') }}</div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div id="footer">
+        <div class="row">
+            <div class="large-5 columns">
+                <p>Ne veš kaj izbrati?<br/>
+                Pomagaj si na <a href="http://www.sportspirit.si/" target="_blank" class="red" style="text-decoration: none;">sportspirit.si</a></p>
+            </div>
+            <div class="large-2 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/hhlogo.png" style="display: block; margin: 0.45em auto 0;">
+            </div>
+            <div class="large-5 columns">
+                <img src="//{{app.request.host}}{{ app.request.basepath }}/img/sportspiritlogo.png" style="display: block; margin: 1.46em 0 0; float: right;">
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%; display: block; margin: 1em 0 0em;"><a href="https://haluzan.com/biz/app/GoClick/hh/sportspirit/web/splosni-pogoji-nagradne-igre.pdf" target="_blank" style="display: block; text-align: center; font-size: 0.7em; color: #888; text-decoration: none;">Splošni pogoji</a></div>
+{% endblock %}
+
+{% block footercontents %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+    <script>document.write('<script src="//{{app.request.host}}{{ app.request.basepath }}/fb-fs/tdfriendselector.js"><\/script>')</script>
+    <script>
+    $(document).ready(function() {
+      $.ajaxSetup({ cache: true });
+      $.getScript('//connect.facebook.net/sl_SI/all.js', function(){
+        FB.init({
+            appId: '163113757233003',
+            //channelUrl: '//yourapp.com/channel.html',
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        });
+
+        FB.Canvas.setSize({ width: 810, height: $('body').height() });
+
+        FB.Canvas.setDoneLoading( function(response) {
+            FB.Canvas.setAutoGrow();
+        });
+
+        checkUserAuth();
+
+      });
+    });
+    </script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/plugins.js"></script>
+    <script src="//{{app.request.host}}{{ app.request.basepath }}/js/main.js"></script>
+{% endblock %}

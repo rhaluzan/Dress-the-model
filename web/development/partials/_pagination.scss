@@ -1,0 +1,29 @@
+#pagination {
+    text-align: center;
+    margin-top: 5px;
+
+    .dots {
+        padding: 7px;
+        color: #da2128;
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+
+    .page {
+        padding: 7px;
+        color: #da2128;
+        text-decoration: none;
+        font-size: 0.8em;
+
+        &.current {
+            color: #000;
+            font-weight: bold;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+}
