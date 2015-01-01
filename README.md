@@ -1,3 +1,5 @@
+![Game img placement](http://notigo.com/img/portfolio/hh.jpg)
+
 # Dress Up
 A HTML5 Game that ran inside a Facebook tab for Helly Hansen (Slovenian branch).
 
